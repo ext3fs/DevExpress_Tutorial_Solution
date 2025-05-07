@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tutorial1
+namespace ReadExcel
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Tutorial1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormInvoice());
+            Application.Run(new Form1());
         }
     }
 }

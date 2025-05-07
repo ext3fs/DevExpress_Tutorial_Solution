@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.35931.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial1", "Tutorial1\Tutorial1.csproj", "{024C7DF1-CD7B-49CC-9E71-E1B84643B33F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice", "Invoice\Invoice.csproj", "{3081CC16-8E14-4505-8462-862FF883A3BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadExcel", "ReadExcel\ReadExcel.csproj", "{B69DE3FA-3526-4BD0-B36F-FCC02FADAE53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{024C7DF1-CD7B-49CC-9E71-E1B84643B33F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{024C7DF1-CD7B-49CC-9E71-E1B84643B33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{024C7DF1-CD7B-49CC-9E71-E1B84643B33F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3081CC16-8E14-4505-8462-862FF883A3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3081CC16-8E14-4505-8462-862FF883A3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3081CC16-8E14-4505-8462-862FF883A3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3081CC16-8E14-4505-8462-862FF883A3BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69DE3FA-3526-4BD0-B36F-FCC02FADAE53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69DE3FA-3526-4BD0-B36F-FCC02FADAE53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69DE3FA-3526-4BD0-B36F-FCC02FADAE53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69DE3FA-3526-4BD0-B36F-FCC02FADAE53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
