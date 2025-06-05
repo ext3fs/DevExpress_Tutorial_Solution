@@ -73,6 +73,16 @@ namespace Modern_UI.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap close_window {
+            get {
+                object obj = ResourceManager.GetObject("close-window", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap customer {
             get {
                 object obj = ResourceManager.GetObject("customer", resourceCulture);
@@ -116,6 +126,16 @@ namespace Modern_UI.Properties {
         internal static System.Drawing.Bitmap ringing {
             get {
                 object obj = ResourceManager.GetObject("ringing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap ronin {
+            get {
+                object obj = ResourceManager.GetObject("ronin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
