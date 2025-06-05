@@ -36,6 +36,7 @@ namespace Invoice
             this.DtToDate = new DevExpress.XtraEditors.DateEdit();
             this.DtFromDate = new DevExpress.XtraEditors.DateEdit();
             this.GridControl = new DevExpress.XtraGrid.GridControl();
+            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colOrderId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCustomerId = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,7 +54,6 @@ namespace Invoice
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtToDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -61,6 +61,7 @@ namespace Invoice
             ((System.ComponentModel.ISupportInitialize)(this.DtFromDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtFromDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -70,7 +71,6 @@ namespace Invoice
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -82,17 +82,19 @@ namespace Invoice
             this.layoutControl1.Controls.Add(this.GridControl);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1066, 623);
+            this.layoutControl1.Size = new System.Drawing.Size(1066, 761);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // BtnLoadData
             // 
-            this.BtnLoadData.Location = new System.Drawing.Point(915, 579);
+            this.BtnLoadData.Location = new System.Drawing.Point(915, 707);
+            this.BtnLoadData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnLoadData.Name = "BtnLoadData";
-            this.BtnLoadData.Size = new System.Drawing.Size(139, 32);
+            this.BtnLoadData.Size = new System.Drawing.Size(139, 40);
             this.BtnLoadData.StyleController = this.layoutControl1;
             this.BtnLoadData.TabIndex = 8;
             this.BtnLoadData.Text = "Load Data";
@@ -100,9 +102,10 @@ namespace Invoice
             // 
             // BtnPrint
             // 
-            this.BtnPrint.Location = new System.Drawing.Point(776, 579);
+            this.BtnPrint.Location = new System.Drawing.Point(776, 707);
+            this.BtnPrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnPrint.Name = "BtnPrint";
-            this.BtnPrint.Size = new System.Drawing.Size(135, 32);
+            this.BtnPrint.Size = new System.Drawing.Size(135, 40);
             this.BtnPrint.StyleController = this.layoutControl1;
             this.BtnPrint.TabIndex = 7;
             this.BtnPrint.Text = "Print";
@@ -111,7 +114,8 @@ namespace Invoice
             // DtToDate
             // 
             this.DtToDate.EditValue = null;
-            this.DtToDate.Location = new System.Drawing.Point(440, 12);
+            this.DtToDate.Location = new System.Drawing.Point(440, 14);
+            this.DtToDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtToDate.Name = "DtToDate";
             this.DtToDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -124,7 +128,8 @@ namespace Invoice
             // DtFromDate
             // 
             this.DtFromDate.EditValue = null;
-            this.DtFromDate.Location = new System.Drawing.Point(112, 12);
+            this.DtFromDate.Location = new System.Drawing.Point(112, 14);
+            this.DtFromDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtFromDate.Name = "DtFromDate";
             this.DtFromDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -137,13 +142,19 @@ namespace Invoice
             // GridControl
             // 
             this.GridControl.DataSource = this.ordersBindingSource;
-            this.GridControl.Location = new System.Drawing.Point(12, 44);
+            this.GridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.GridControl.Location = new System.Drawing.Point(12, 53);
             this.GridControl.MainView = this.gridView1;
+            this.GridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GridControl.Name = "GridControl";
-            this.GridControl.Size = new System.Drawing.Size(1042, 531);
+            this.GridControl.Size = new System.Drawing.Size(1042, 650);
             this.GridControl.TabIndex = 4;
             this.GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // ordersBindingSource
+            // 
+            this.ordersBindingSource.DataSource = typeof(Invoice.Orders);
             // 
             // gridView1
             // 
@@ -156,6 +167,7 @@ namespace Invoice
             this.colCity,
             this.colPhone,
             this.colOrderDate});
+            this.gridView1.DetailHeight = 428;
             this.gridView1.GridControl = this.GridControl;
             this.gridView1.Name = "gridView1";
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
@@ -244,15 +256,15 @@ namespace Invoice
             this.emptySpaceItem1,
             this.emptySpaceItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1066, 623);
+            this.Root.Size = new System.Drawing.Size(1066, 761);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.GridControl;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 32);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 39);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1046, 535);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1046, 654);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -260,10 +272,10 @@ namespace Invoice
             // 
             this.layoutControlItem2.Control = this.DtFromDate;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem2.MaxSize = new System.Drawing.Size(328, 32);
-            this.layoutControlItem2.MinSize = new System.Drawing.Size(328, 32);
+            this.layoutControlItem2.MaxSize = new System.Drawing.Size(328, 39);
+            this.layoutControlItem2.MinSize = new System.Drawing.Size(328, 39);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(328, 32);
+            this.layoutControlItem2.Size = new System.Drawing.Size(328, 39);
             this.layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem2.Text = "From Date:";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(88, 22);
@@ -272,10 +284,10 @@ namespace Invoice
             // 
             this.layoutControlItem3.Control = this.DtToDate;
             this.layoutControlItem3.Location = new System.Drawing.Point(328, 0);
-            this.layoutControlItem3.MaxSize = new System.Drawing.Size(317, 32);
-            this.layoutControlItem3.MinSize = new System.Drawing.Size(317, 32);
+            this.layoutControlItem3.MaxSize = new System.Drawing.Size(317, 39);
+            this.layoutControlItem3.MinSize = new System.Drawing.Size(317, 39);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(317, 32);
+            this.layoutControlItem3.Size = new System.Drawing.Size(317, 39);
             this.layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem3.Text = "To Date:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(88, 22);
@@ -283,11 +295,11 @@ namespace Invoice
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.BtnPrint;
-            this.layoutControlItem4.Location = new System.Drawing.Point(764, 567);
-            this.layoutControlItem4.MaxSize = new System.Drawing.Size(139, 36);
-            this.layoutControlItem4.MinSize = new System.Drawing.Size(139, 36);
+            this.layoutControlItem4.Location = new System.Drawing.Point(764, 693);
+            this.layoutControlItem4.MaxSize = new System.Drawing.Size(139, 44);
+            this.layoutControlItem4.MinSize = new System.Drawing.Size(139, 44);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(139, 36);
+            this.layoutControlItem4.Size = new System.Drawing.Size(139, 44);
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
@@ -295,11 +307,11 @@ namespace Invoice
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.BtnLoadData;
-            this.layoutControlItem5.Location = new System.Drawing.Point(903, 567);
-            this.layoutControlItem5.MaxSize = new System.Drawing.Size(143, 36);
-            this.layoutControlItem5.MinSize = new System.Drawing.Size(143, 36);
+            this.layoutControlItem5.Location = new System.Drawing.Point(903, 693);
+            this.layoutControlItem5.MaxSize = new System.Drawing.Size(143, 44);
+            this.layoutControlItem5.MinSize = new System.Drawing.Size(143, 44);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(143, 36);
+            this.layoutControlItem5.Size = new System.Drawing.Size(143, 44);
             this.layoutControlItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
@@ -307,9 +319,9 @@ namespace Invoice
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 567);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 693);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(764, 36);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(764, 44);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
@@ -317,22 +329,20 @@ namespace Invoice
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(645, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(401, 32);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(401, 39);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // ordersBindingSource
-            // 
-            this.ordersBindingSource.DataSource = typeof(Invoice.Orders);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 623);
+            this.ClientSize = new System.Drawing.Size(1066, 761);
             this.Controls.Add(this.layoutControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Invoice";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DtToDate.Properties.CalendarTimeProperties)).EndInit();
@@ -340,6 +350,7 @@ namespace Invoice
             ((System.ComponentModel.ISupportInitialize)(this.DtFromDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtFromDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -349,7 +360,6 @@ namespace Invoice
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

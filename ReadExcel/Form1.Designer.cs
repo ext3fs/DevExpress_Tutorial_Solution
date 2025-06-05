@@ -31,16 +31,16 @@ namespace ReadExcel
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.TxtFileName = new System.Windows.Forms.TextBox();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.CbxSheet = new System.Windows.Forms.ComboBox();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.BtnBrowse = new System.Windows.Forms.Button();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.BtnExport = new System.Windows.Forms.Button();
+            this.BtnBrowse = new System.Windows.Forms.Button();
+            this.CbxSheet = new System.Windows.Forms.ComboBox();
+            this.TxtFileName = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.customerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,8 +56,8 @@ namespace ReadExcel
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -81,19 +81,42 @@ namespace ReadExcel
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // Root
+            // BtnExport
             // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem2,
-            this.layoutControlItem3,
-            this.layoutControlItem4,
-            this.layoutControlItem5});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1104, 607);
-            this.Root.TextVisible = false;
+            this.BtnExport.Location = new System.Drawing.Point(958, 564);
+            this.BtnExport.Name = "BtnExport";
+            this.BtnExport.Size = new System.Drawing.Size(134, 31);
+            this.BtnExport.TabIndex = 8;
+            this.BtnExport.Text = "&Export";
+            this.BtnExport.UseVisualStyleBackColor = true;
+            this.BtnExport.Click += new System.EventHandler(this.BtnExport_Click);
+            // 
+            // BtnBrowse
+            // 
+            this.BtnBrowse.Location = new System.Drawing.Point(958, 530);
+            this.BtnBrowse.Name = "BtnBrowse";
+            this.BtnBrowse.Size = new System.Drawing.Size(134, 30);
+            this.BtnBrowse.TabIndex = 7;
+            this.BtnBrowse.Text = "...";
+            this.BtnBrowse.UseVisualStyleBackColor = true;
+            this.BtnBrowse.Click += new System.EventHandler(this.BtnBrowse_Click);
+            // 
+            // CbxSheet
+            // 
+            this.CbxSheet.FormattingEnabled = true;
+            this.CbxSheet.Location = new System.Drawing.Point(107, 564);
+            this.CbxSheet.Name = "CbxSheet";
+            this.CbxSheet.Size = new System.Drawing.Size(847, 26);
+            this.CbxSheet.TabIndex = 6;
+            this.CbxSheet.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // TxtFileName
+            // 
+            this.TxtFileName.Location = new System.Drawing.Point(107, 530);
+            this.TxtFileName.Name = "TxtFileName";
+            this.TxtFileName.ReadOnly = true;
+            this.TxtFileName.Size = new System.Drawing.Size(847, 30);
+            this.TxtFileName.TabIndex = 5;
             // 
             // dataGridView1
             // 
@@ -119,6 +142,20 @@ namespace ReadExcel
             this.dataGridView1.Size = new System.Drawing.Size(1080, 514);
             this.dataGridView1.TabIndex = 4;
             // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem5});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(1104, 607);
+            this.Root.TextVisible = false;
+            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.dataGridView1;
@@ -127,14 +164,6 @@ namespace ReadExcel
             this.layoutControlItem1.Size = new System.Drawing.Size(1084, 518);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // TxtFileName
-            // 
-            this.TxtFileName.Location = new System.Drawing.Point(107, 530);
-            this.TxtFileName.Name = "TxtFileName";
-            this.TxtFileName.ReadOnly = true;
-            this.TxtFileName.Size = new System.Drawing.Size(847, 30);
-            this.TxtFileName.TabIndex = 5;
             // 
             // layoutControlItem2
             // 
@@ -145,15 +174,6 @@ namespace ReadExcel
             this.layoutControlItem2.Text = "File Name:";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(83, 22);
             // 
-            // CbxSheet
-            // 
-            this.CbxSheet.FormattingEnabled = true;
-            this.CbxSheet.Location = new System.Drawing.Point(107, 564);
-            this.CbxSheet.Name = "CbxSheet";
-            this.CbxSheet.Size = new System.Drawing.Size(847, 26);
-            this.CbxSheet.TabIndex = 6;
-            this.CbxSheet.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.CbxSheet;
@@ -162,16 +182,6 @@ namespace ReadExcel
             this.layoutControlItem3.Size = new System.Drawing.Size(946, 35);
             this.layoutControlItem3.Text = "Sheet:";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(83, 22);
-            // 
-            // BtnBrowse
-            // 
-            this.BtnBrowse.Location = new System.Drawing.Point(958, 530);
-            this.BtnBrowse.Name = "BtnBrowse";
-            this.BtnBrowse.Size = new System.Drawing.Size(134, 30);
-            this.BtnBrowse.TabIndex = 7;
-            this.BtnBrowse.Text = "...";
-            this.BtnBrowse.UseVisualStyleBackColor = true;
-            this.BtnBrowse.Click += new System.EventHandler(this.BtnBrowse_Click);
             // 
             // layoutControlItem4
             // 
@@ -184,16 +194,6 @@ namespace ReadExcel
             this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // BtnExport
-            // 
-            this.BtnExport.Location = new System.Drawing.Point(958, 564);
-            this.BtnExport.Name = "BtnExport";
-            this.BtnExport.Size = new System.Drawing.Size(134, 31);
-            this.BtnExport.TabIndex = 8;
-            this.BtnExport.Text = "&Export";
-            this.BtnExport.UseVisualStyleBackColor = true;
-            this.BtnExport.Click += new System.EventHandler(this.BtnExport_Click);
             // 
             // layoutControlItem5
             // 
@@ -307,11 +307,11 @@ namespace ReadExcel
             this.Controls.Add(this.layoutControl1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Read Excel";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();

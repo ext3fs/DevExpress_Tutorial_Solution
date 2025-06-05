@@ -3,11 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.35931.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial1", "Tutorial1\Tutorial1.csproj", "{024C7DF1-CD7B-49CC-9E71-E1B84643B33F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice", "Invoice\Invoice.csproj", "{3081CC16-8E14-4505-8462-862FF883A3BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadExcel", "ReadExcel\ReadExcel.csproj", "{B69DE3FA-3526-4BD0-B36F-FCC02FADAE53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{82562E38-A348-43D6-ACB1-5B27993B3FE3}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modern_UI", "Modern_UI\Modern_UI.csproj", "{B2DEA5FF-8CE8-4F6F-8617-178FEE2A7310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice2", "Invoice2\Invoice2.csproj", "{E72905C7-6320-423E-B0BD-76DA10666F66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +22,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{024C7DF1-CD7B-49CC-9E71-E1B84643B33F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{024C7DF1-CD7B-49CC-9E71-E1B84643B33F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{024C7DF1-CD7B-49CC-9E71-E1B84643B33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{024C7DF1-CD7B-49CC-9E71-E1B84643B33F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3081CC16-8E14-4505-8462-862FF883A3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3081CC16-8E14-4505-8462-862FF883A3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3081CC16-8E14-4505-8462-862FF883A3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +30,14 @@ Global
 		{B69DE3FA-3526-4BD0-B36F-FCC02FADAE53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B69DE3FA-3526-4BD0-B36F-FCC02FADAE53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B69DE3FA-3526-4BD0-B36F-FCC02FADAE53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2DEA5FF-8CE8-4F6F-8617-178FEE2A7310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2DEA5FF-8CE8-4F6F-8617-178FEE2A7310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2DEA5FF-8CE8-4F6F-8617-178FEE2A7310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2DEA5FF-8CE8-4F6F-8617-178FEE2A7310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E72905C7-6320-423E-B0BD-76DA10666F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E72905C7-6320-423E-B0BD-76DA10666F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E72905C7-6320-423E-B0BD-76DA10666F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E72905C7-6320-423E-B0BD-76DA10666F66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

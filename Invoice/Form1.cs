@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,15 +14,56 @@ using System.Windows.Forms;
 
 namespace Invoice
 {
-    public partial class Form1 : Form
+    public partial class Form1 : XtraForm
     {
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Today;
+            DateTime oneMonthAgo = today.AddMonths(-1);
+
+            DtFromDate.DateTime = oneMonthAgo;
+            DtToDate.DateTime = today;
+        }
+
         private void BtnPrint_Click(object sender, EventArgs e)
         {
+            Orders obj = ordersBindingSource.Current as Orders;
+            if (obj == null)
+                return;
+
+            try
+            {
+                using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
+                {
+                    if (db.State == ConnectionState.Closed)
+                        db.Open();
+
+                    string query = @"SELECT d.OrderID, p.ProductName, d.Quantity, d.Discount, d.UnitPrice
+                    FROM [Order Details] d 
+                    INNER JOIN Products p ON d.ProductID = p.ProductID
+                    WHERE d.OrderID = @OrderID";
+
+                    // Dapper의 매개변수 사용
+                    var parameters = new { OrderID = obj.OrderId };
+                    var list = db.Query<OrderDetail>(query, parameters).ToList();
+
+                    using (var frm = new XfrmPrint())
+                    {
+                        frm.PrintInvoice(obj, list);
+                        frm.ShowDialog();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"오류 발생: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -54,6 +96,5 @@ namespace Invoice
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-       
     }
 }

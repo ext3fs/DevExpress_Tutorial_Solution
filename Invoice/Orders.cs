@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Invoice
 {
-    class Orders
+    public class Orders
     {
         public int OrderId { get; set; }
         public string CustomerId { get; set; }
